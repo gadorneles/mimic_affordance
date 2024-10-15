@@ -7,7 +7,7 @@ from robocasa.models.scenes.scene_registry import LayoutType, StyleType
 if __name__ == "__main__":
 
     env = suite.make(
-        env_name="Kitchen",
+        env_name="PnPCounterToCab",
         robots="PandaMobile",
         controller_configs=load_controller_config(default_controller='OSC_POSE'),
         translucent_robot=False,
@@ -20,8 +20,7 @@ if __name__ == "__main__":
         control_freq=20,
         renderer="mjviewer",
     )
-
-    obj = env.objects['mug']
+    
     env.reset()
     env.viewer.set_camera(camera_id=0)
 
